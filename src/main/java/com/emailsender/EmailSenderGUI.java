@@ -55,17 +55,21 @@ public class EmailSenderGUI extends JFrame {
         contentPane.add(emailLabel);
         emailField = new JTextField();
         contentPane.add(emailField);
-        emailField.setColumns(10);
+        emailField.setColumns(15);
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
+
 
         JLabel passwordLabel = new JLabel("App Secret Password:");
         contentPane.add(passwordLabel);
         passwordField = new JPasswordField();
         contentPane.add(passwordField);
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
 
         JLabel subjectLabel = new JLabel("Email Subject:");
         contentPane.add(subjectLabel);
         subjectField = new JTextField();
         contentPane.add(subjectField);
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
 
         JLabel csvPathLabel = new JLabel("CSV File Path:");
         contentPane.add(csvPathLabel);
@@ -77,16 +81,6 @@ public class EmailSenderGUI extends JFrame {
         csvBrowseButton.addActionListener(e -> csvPathField.setText(selectFile()));
         contentPane.add(csvBrowseButton);
 
-        JLabel messageFileLabel = new JLabel("Message File Path:");
-        contentPane.add(messageFileLabel);
-        messageFilePathField = new JTextField();
-        messageFilePathField.setEditable(false);
-        contentPane.add(messageFilePathField);
-
-        JButton messageFileBrowseButton = new JButton("Browse Message File");
-        messageFileBrowseButton.addActionListener(e -> messageFilePathField.setText(selectFile()));
-        contentPane.add(messageFileBrowseButton);
-
         JLabel attachmentPathLabel = new JLabel("Attachment File Path:");
         contentPane.add(attachmentPathLabel);
         attachmentPathField = new JTextField();
@@ -97,11 +91,22 @@ public class EmailSenderGUI extends JFrame {
         attachmentBrowseButton.addActionListener(e -> attachmentPathField.setText(selectFile()));
         contentPane.add(attachmentBrowseButton);
 
+        JLabel messageFileLabel = new JLabel("Message File Path:");
+        contentPane.add(messageFileLabel);
+        messageFilePathField = new JTextField();
+        messageFilePathField.setEditable(false);
+        contentPane.add(messageFilePathField);
+
+        JButton messageFileBrowseButton = new JButton("Browse Message File");
+        messageFileBrowseButton.addActionListener(e -> messageFilePathField.setText(selectFile()));
+        contentPane.add(messageFileBrowseButton);
+
         JLabel messageBodyLabel = new JLabel("Message Body (or leave blank if using file):");
         contentPane.add(messageBodyLabel);
         messageBodyArea = new JTextArea();
         contentPane.add(new JScrollPane(messageBodyArea));
 
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
         JButton sendButton = new JButton("Send Emails");
         sendButton.addActionListener(e -> {
             senderEmail = emailField.getText();
