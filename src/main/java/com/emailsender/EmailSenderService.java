@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EmailSenderService {
-    
+
     private String senderEmail;
     private String password;
     private String subject;
@@ -21,12 +21,13 @@ public class EmailSenderService {
     // Tracking email statuses
     private ArrayList<String> successfulEmails = new ArrayList<>();
     private ArrayList<String> failedEmails = new ArrayList<>();
-    
+
     // Pause and cancel flags
     private boolean isPaused = false;
     private boolean isCancelled = false;
 
-    public EmailSenderService(String senderEmail, String password, String subject, String messageBody, String attachmentPath, String csvPath) {
+    public EmailSenderService(String senderEmail, String password, String subject, String messageBody,
+            String attachmentPath, String csvPath) {
         this.senderEmail = senderEmail;
         this.password = password;
         this.subject = subject;

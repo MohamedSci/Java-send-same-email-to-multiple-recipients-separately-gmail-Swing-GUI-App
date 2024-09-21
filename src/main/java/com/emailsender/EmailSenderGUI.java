@@ -45,7 +45,7 @@ public class EmailSenderGUI extends JFrame {
     public EmailSenderGUI() {
         setTitle("Email Sender");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 600, 500);
+        setBounds(100, 0, 900, 700);
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -56,20 +56,19 @@ public class EmailSenderGUI extends JFrame {
         emailField = new JTextField();
         contentPane.add(emailField);
         emailField.setColumns(15);
-        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
-
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20))); // 20 pixels of vertical space
 
         JLabel passwordLabel = new JLabel("App Secret Password:");
         contentPane.add(passwordLabel);
         passwordField = new JPasswordField();
         contentPane.add(passwordField);
-        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20))); // 20 pixels of vertical space
 
         JLabel subjectLabel = new JLabel("Email Subject:");
         contentPane.add(subjectLabel);
         subjectField = new JTextField();
         contentPane.add(subjectField);
-        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20))); // 20 pixels of vertical space
 
         JLabel csvPathLabel = new JLabel("CSV File Path:");
         contentPane.add(csvPathLabel);
@@ -105,8 +104,9 @@ public class EmailSenderGUI extends JFrame {
         contentPane.add(messageBodyLabel);
         messageBodyArea = new JTextArea();
         contentPane.add(new JScrollPane(messageBodyArea));
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20))); // 20 pixels of vertical space
 
-        contentPane.add(Box.createRigidArea(new Dimension(0, 20)));  // 20 pixels of vertical space
+        contentPane.add(Box.createRigidArea(new Dimension(0, 20))); // 20 pixels of vertical space
         JButton sendButton = new JButton("Send Emails");
         sendButton.addActionListener(e -> {
             senderEmail = emailField.getText();
@@ -115,14 +115,16 @@ public class EmailSenderGUI extends JFrame {
             csvPath = csvPathField.getText();
             messageFilePath = messageFilePathField.getText();
             attachmentPath = attachmentPathField.getText();
-            messageBody = messageBodyArea.getText().isEmpty() ? readFileContent(messageFilePath) : messageBodyArea.getText();
+            messageBody = messageBodyArea.getText().isEmpty() ? readFileContent(messageFilePath)
+                    : messageBodyArea.getText();
 
             if (validateInputs()) {
                 // Start email sending process and show status frame
-                showStatusFrame(); 
+                showStatusFrame();
                 sendEmails();
             } else {
-                JOptionPane.showMessageDialog(null, "Please fill all required fields correctly.", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Please fill all required fields correctly.", "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         });
         contentPane.add(sendButton);
