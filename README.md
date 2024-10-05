@@ -168,6 +168,12 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENS
 
 Feel free to fork the repository, submit issues, or make a pull request if you'd like to improve the project!
 
-## [Buy me a Coffee☕]:<https://ko-fi.com/mohamedsaidibrahim>
+## [Buy me a Coffee☕](<https://ko-fi.com/mohamedsaidibrahim>)
 
-If you enjoy this content and want to support me, feel free to [buy me a coffee]:<https://ko-fi.com/mohamedsaidibrahim>
+If you enjoy this content and want to support me, feel free to [buy me a coffee](<https://ko-fi.com/mohamedsaidibrahim>)
+![Screenshot 1](Screenshots/2.cofffffe.png)(<https://ko-fi.com/mohamedsaidibrahim>)
+
+### **Screenshots**
+
+![Screenshot 2](Screenshots/1.sender%20emails.png)
+![Screenshot 3](Screenshots/2.%20Sent%20Failed%20List.png)
