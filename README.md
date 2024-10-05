@@ -132,6 +132,7 @@ After starting the email-sending process, a new window displays:
 ## **App Secret Password**
 
 To use your Google email securely, you'll need to generate an **App Password** for your Gmail account:
+
 1. Go to your **Google Account** settings.
 2. Navigate to **Security** and enable **2-Step Verification** (if not already enabled).
 3. Go to **App Passwords** and generate one for the **Mail** app.
@@ -147,6 +148,7 @@ Use this app password in the **App Password** field of the application instead o
 ## **Customization**
 
 You can customize the email message, attachment type, and SMTP configuration:
+
 - **Message File**: Upload a custom `.txt` file with your email body.
 - **CSV File**: Upload a `.csv` file with recipient email addresses.
 - **Attachment**: Attach files like PDFs, images, or videos.
@@ -158,7 +160,7 @@ You can customize the email message, attachment type, and SMTP configuration:
 
 ## **License**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -166,3 +168,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Feel free to fork the repository, submit issues, or make a pull request if you'd like to improve the project!
 
+## [Buy me a Coffee☕]:<https://ko-fi.com/mohamedsaidibrahim>
+
+If you enjoy this content and want to support me, feel free to [buy me a coffee]:<https://ko-fi.com/mohamedsaidibrahim>
